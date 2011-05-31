@@ -1,0 +1,49 @@
+<?php
+
+abstract class SparqlViewsQueryTest extends ViewsTestCase {
+  var $endpoint = array(
+    'title' => 'ISWC2010',
+    'endpoint' => 'http://localhost/arc2/ISWC2010/sparql.php',
+  );
+
+  protected function setUp() {
+    parent::setUp('sparql_views', 'sparql_registry', 'views', 'views_ui');
+    // Save the endpoint.
+    $form_state['values'] = $this->endpoint;
+    drupal_form_submit('sparql_registry_form_edit', $form_state);
+
+    // Define the Views data variable before enabling the test module.
+    variable_set('sparql_views_test_views_data', $this->viewsData());
+    variable_set('sparql_views_test_views_plugins', $this->viewsPlugins());
+
+    module_enable(array('sparql_views_test'));
+    $this->resetAll();
+
+    // @todo Once SPARQL Endpoint is in good shape, instantiate a SPARQL
+    // endpoint during the test.
+  }
+
+  /**
+   * The views data definition.
+   */
+  protected function viewsData() {
+  }
+
+  protected function viewsPlugins() {
+    return array();
+  }
+
+  /**
+   * A very simple test dataset.
+   */
+  protected function dataSet() {
+
+  }
+
+  /**
+   * Build and return a basic view of the views_test table.
+   */
+  protected function getBasicView() {
+
+  }
+}

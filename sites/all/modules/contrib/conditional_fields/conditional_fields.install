@@ -1,0 +1,39 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the Conditional Fields module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function conditional_fields_schema() {
+  $schema['conditional_fields'] = array(
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'The primary identifier for a dependency.',
+      ),
+      'dependee' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'The id of the dependee field instance.',
+      ),
+      'dependent' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'The id of the dependent field instance.',
+      ),
+      'options' => array(
+        'type' => 'blob',
+        'size' => 'big',
+        'not null' => TRUE,
+        'serialize' => TRUE,
+        'description' => 'Serialized data containing the options for the dependency.',
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}

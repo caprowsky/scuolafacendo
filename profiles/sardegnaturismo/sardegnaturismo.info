@@ -1,0 +1,55 @@
+name = SardegnaTurismo Evolution
+description = Install a fantastic new "SardegnaTurismo Evolution" website with commonly used features pre-configured.
+version = VERSION
+core = 7.x
+dependencies[] = block
+dependencies[] = color
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = toolbar
+dependencies[] = overlay
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = rdf
+dependencies[] = features
+dependencies[] = ctools
+dependencies[] = job_scheduler
+dependencies[] = feeds
+dependencies[] = feeds_ui
+dependencies[] = views
+dependencies[] = views_ui
+dependencies[] = rules
+dependencies[] = rules_admin
+dependencies[] = feeds_xpathparser
+dependencies[] = token
+dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = date_api
+dependencies[] = date_tools
+dependencies[] = date_views
+dependencies[] = date
+dependencies[] = devel
+dependencies[] = link
+dependencies[] = media
+dependencies[] = media_internet
+dependencies[] = styles
+dependencies[] = file_styles
+dependencies[] = styles_ui
+dependencies[] = geofield
+
+
+files[] = sardegnaturismo.profile
+
+

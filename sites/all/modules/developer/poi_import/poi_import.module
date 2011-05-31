@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Poi import feature.
+ */
+
+include_once('poi_import.features.inc');

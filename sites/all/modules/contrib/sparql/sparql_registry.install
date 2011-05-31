@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ *
+ * @see hook_schema()
+ * @link schemaapi Schema API @endlink
+ */
+function sparql_registry_schema() {
+  $schema['sparql_registry'] = array(
+    'description' => 'The base table for SPARQL Endpoints',
+    'fields' => array(
+      'srid' => array(
+        'description' => 'The primary identifier for an endpoint.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'title' => array(
+        'description' => 'The title of this endpoint, always treated as non-markup plain text.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'endpoint' => array(
+        'description' => 'The url of this endpoint.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'dataset' => array(
+        'description' => 'dataset',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+    ),
+    'primary key' => array('srid'),
+  );
+  return $schema;
+}

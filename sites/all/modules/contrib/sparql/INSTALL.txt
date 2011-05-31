@@ -1,0 +1,18 @@
+
+NOTE: This is experimental software meant for advanced users; assume nothing
+works, and you may be pleasantly surprised. And when it breaks, you get to
+keep both pieces.
+
+REQUIREMENTS
+------------
+This module requires Drupal 7.x and PHP 5.2.x (or newer), and the following
+modules:
+
+INSTALLATION
+------------
+
+  1. Copy all the module files into a subdirectory called modules/sparql/
+     under your Drupal installation directory.
+     
+  2. Go to [Administer >> Site building >> Modules] and enable the SPARQL
+     API module.
